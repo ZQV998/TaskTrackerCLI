@@ -66,6 +66,14 @@ void handleListDone(std::vector<std::string> args) {
     // todo
 }
 
+void handleMarkInProgress(std::vector<std::string> args) {
+    // todo
+}
+
+void handleMarkDone(std::vector<std::string> args) {
+    // todo
+}
+
 
 int main(int argc, char* argv[]) {
     if (argc == 1) {
@@ -90,7 +98,9 @@ int main(int argc, char* argv[]) {
             {"add", handleAdd},
             {"update", handleUpdate},
             {"delete", handleDelete},
-            {"list", handleList} // 使用 handleList 函数
+            {"list", handleList},
+            {"mark-in-progress", handleMarkInProgress},
+            {"mark-done", handleMarkDone}
     };
 
     // 查找并执行对应的功能处理函数
