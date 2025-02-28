@@ -41,37 +41,39 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = F$:/Program$ Files/C++/TaskTrackerCLI/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target TaskTrackerCLI
+# Object build statements for EXECUTABLE target task-cli
 
 
 #############################################
-# Order-only phony target for TaskTrackerCLI
+# Order-only phony target for task-cli
 
-build cmake_object_order_depends_target_TaskTrackerCLI: phony || CMakeFiles/TaskTrackerCLI.dir
+build cmake_object_order_depends_target_task-cli: phony || CMakeFiles/task-cli.dir
 
-build CMakeFiles/TaskTrackerCLI.dir/src/main.cpp.obj: CXX_COMPILER__TaskTrackerCLI_unscanned_Debug F$:/Program$ Files/C++/TaskTrackerCLI/src/main.cpp || cmake_object_order_depends_target_TaskTrackerCLI
-  DEP_FILE = CMakeFiles\TaskTrackerCLI.dir\src\main.cpp.obj.d
+build CMakeFiles/task-cli.dir/src/main.cpp.obj: CXX_COMPILER__task-cli_unscanned_Debug F$:/Program$ Files/C++/TaskTrackerCLI/src/main.cpp || cmake_object_order_depends_target_task-cli
+  DEP_FILE = CMakeFiles\task-cli.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\TaskTrackerCLI.dir
-  OBJECT_FILE_DIR = CMakeFiles\TaskTrackerCLI.dir\src
+  INCLUDES = -I"F:/Program Files/C++/TaskTrackerCLI/include"
+  OBJECT_DIR = CMakeFiles\task-cli.dir
+  OBJECT_FILE_DIR = CMakeFiles\task-cli.dir\src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target TaskTrackerCLI
+# Link build statements for EXECUTABLE target task-cli
 
 
 #############################################
-# Link the executable TaskTrackerCLI.exe
+# Link the executable task-cli.exe
 
-build TaskTrackerCLI.exe: CXX_EXECUTABLE_LINKER__TaskTrackerCLI_Debug CMakeFiles/TaskTrackerCLI.dir/src/main.cpp.obj
+build task-cli.exe: CXX_EXECUTABLE_LINKER__task-cli_Debug CMakeFiles/task-cli.dir/src/main.cpp.obj
   FLAGS = -g
+  LINK_FLAGS = -static
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\TaskTrackerCLI.dir
+  OBJECT_DIR = CMakeFiles\task-cli.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = TaskTrackerCLI.exe
-  TARGET_IMPLIB = libTaskTrackerCLI.dll.a
-  TARGET_PDB = TaskTrackerCLI.exe.dbg
+  TARGET_FILE = task-cli.exe
+  TARGET_IMPLIB = libtask-cli.dll.a
+  TARGET_PDB = task-cli.exe.dbg
 
 
 #############################################
@@ -99,7 +101,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build TaskTrackerCLI: phony TaskTrackerCLI.exe
+build task-cli: phony task-cli.exe
 
 # =============================================================================
 # Folder targets.
@@ -109,7 +111,7 @@ build TaskTrackerCLI: phony TaskTrackerCLI.exe
 #############################################
 # Folder: F:/Program Files/C++/TaskTrackerCLI/cmake-build-debug
 
-build all: phony TaskTrackerCLI.exe
+build all: phony task-cli.exe
 
 # =============================================================================
 # Built-in targets
