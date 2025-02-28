@@ -49,6 +49,13 @@ cmake_ninja_workdir = F$:/Program$ Files/C++/TaskTrackerCLI/cmake-build-debug/
 
 build cmake_object_order_depends_target_task-cli: phony || CMakeFiles/task-cli.dir
 
+build CMakeFiles/task-cli.dir/src/TaskManager.cpp.obj: CXX_COMPILER__task-cli_unscanned_Debug F$:/Program$ Files/C++/TaskTrackerCLI/src/TaskManager.cpp || cmake_object_order_depends_target_task-cli
+  DEP_FILE = CMakeFiles\task-cli.dir\src\TaskManager.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I"F:/Program Files/C++/TaskTrackerCLI/include"
+  OBJECT_DIR = CMakeFiles\task-cli.dir
+  OBJECT_FILE_DIR = CMakeFiles\task-cli.dir\src
+
 build CMakeFiles/task-cli.dir/src/main.cpp.obj: CXX_COMPILER__task-cli_unscanned_Debug F$:/Program$ Files/C++/TaskTrackerCLI/src/main.cpp || cmake_object_order_depends_target_task-cli
   DEP_FILE = CMakeFiles\task-cli.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -64,7 +71,7 @@ build CMakeFiles/task-cli.dir/src/main.cpp.obj: CXX_COMPILER__task-cli_unscanned
 #############################################
 # Link the executable task-cli.exe
 
-build task-cli.exe: CXX_EXECUTABLE_LINKER__task-cli_Debug CMakeFiles/task-cli.dir/src/main.cpp.obj
+build task-cli.exe: CXX_EXECUTABLE_LINKER__task-cli_Debug CMakeFiles/task-cli.dir/src/TaskManager.cpp.obj CMakeFiles/task-cli.dir/src/main.cpp.obj
   FLAGS = -g
   LINK_FLAGS = -static
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
